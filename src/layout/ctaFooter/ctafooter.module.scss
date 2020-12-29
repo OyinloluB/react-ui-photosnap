@@ -1,0 +1,55 @@
+@import "../../base-styles/variable.scss";
+@import "../../base-styles/mixins.scss";
+
+.container {
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0)
+    ),
+    url("../../assets/cta-footer/bg-beta.jpg");
+  font-family: "DM Sans", sans-serif;
+
+  &_wrapper {
+    padding: 40px 100px;
+    color: #fff;
+    @include grid(75% 25%, null);
+    align-items: center;
+
+    @media screen and (max-width: 420px) {
+      @include grid(100%, null);
+      padding: 60px 20px;
+    }
+
+    &_dsktp {
+      display: block;
+
+      @media screen and (max-width: 420px) {
+        display: none;
+      }
+    }
+
+    &_mobile {
+      display: none;
+
+      @media screen and (max-width: 420px) {
+        display: block;
+      }
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 4.17px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    width: 45%;
+
+    @media screen and (max-width: 420px) {
+      width: 100%;
+      margin-bottom: 4vh;
+    }
+  }
+}

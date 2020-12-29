@@ -1,0 +1,50 @@
+.container {
+  font-family: "DM Sans", sans-serif;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 5vh;
+  row-gap: 10vh;
+  padding: 80px 150px;
+  align-items: center;
+  text-align: center;
+
+  @media screen and (max-width: 420px) {
+    padding: 40px 30px;
+    grid-template-columns: auto;
+    row-gap: 5vh;
+  }
+
+  &_content {
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 3vh;
+
+    @media screen and (max-width: 420px) {
+      grid-template-rows: auto;
+      row-gap: 3vh;
+    }
+
+    img {
+      object-fit: contain;
+      width: 72px;
+      height: 72px;
+    }
+
+    &_title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 25px;
+      text-transform: capitalize;
+
+      @media screen and (max-width: 420px) {
+        margin-bottom: 2vh;
+      }
+    }
+
+    &_text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+  }
+}

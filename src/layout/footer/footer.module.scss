@@ -1,0 +1,95 @@
+@import "../../base-styles/variable.scss";
+@import "../../base-styles/mixins.scss";
+
+.container {
+  background-color: $primaryColor;
+  @include grid(75% 25%, null);
+  color: #fff;
+  padding: 40px 100px;
+  font-family: "DM Sans", sans-serif;
+
+  @media screen and (max-width: 420px) {
+    @include grid(auto, null);
+    padding: 40px 70px;
+  }
+
+  &_lhs {
+    @include flex(flex-start, null, row);
+    position: relative;
+    color: #fff;
+
+    @media screen and (max-width: 420px) {
+      @include flex(center, center, column);
+    }
+
+    &_images {
+      div {
+        position: absolute;
+        bottom: 0;
+
+        @media screen and (max-width: 420px) {
+          position: unset;
+          bottom: unset;
+        }
+
+        img {
+          margin-right: 5px;
+          width: 15px;
+
+          @media screen and (max-width: 420px) {
+            margin: 5px;
+            margin-top: 3vh;
+          }
+        }
+      }
+    }
+
+    &_nav {
+      margin-left: 20vh;
+
+      @media screen and (max-width: 420px) {
+        margin: 4vh 0;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 0 0 10px 0;
+        cursor: pointer;
+
+        &:hover {
+          mix-blend-mode: normal;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &_rhs {
+    position: relative;
+    text-align: center;
+
+    @media screen and (max-width: 420px) {
+      position: unset;
+    }
+
+    &_copyright {
+      position: absolute;
+      bottom: 0;
+      font-size: 13px;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+
+      @media screen and (max-width: 420px) {
+        position: unset;
+        bottom: unset;
+        margin-top: 4vh;
+      }
+    }
+  }
+}
+
+p {
+  margin: 0;
+}

@@ -1,0 +1,19 @@
+@import "../../base-styles/mixins.scss";
+
+.container {
+  @include flex(center, null, row);
+  font-family: "DM Sans", sans-serif;
+
+  p {
+    margin: 0;
+    padding-right: 10px;
+    letter-spacing: 2px;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

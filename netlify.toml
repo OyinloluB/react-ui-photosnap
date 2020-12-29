@@ -1,0 +1,9 @@
+[build]
+  command = "npm run build"
+  publish="build"
+  base = "Documents/Oyinloluwa Professional/photosnap/photosnap-multi-page-website/photosnap/"
+
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

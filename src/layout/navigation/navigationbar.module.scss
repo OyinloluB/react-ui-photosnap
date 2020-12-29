@@ -1,0 +1,90 @@
+@import "../../base-styles/mixins.scss";
+@import "../../base-styles/variable.scss";
+
+.container {
+  @include flex(center, space-between, row);
+  padding: 5px 120px;
+
+  @media screen and (max-width: 420px) {
+    padding: 20px 20px 15px 20px;
+  }
+}
+
+.dsktp_nav {
+  @media screen and (max-width: 420px) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+        padding: 0 15px;
+        font-size: 1;
+        text-transform: uppercase;
+        font-family: "DM Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 2px;
+        color: $primaryColor;
+        cursor: pointer;
+
+        &:hover {
+          color: #dfdfdf;
+        }
+      }
+    }
+  }
+
+  &_button {
+    @media screen and (max-width: 420px) {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @media screen and (max-width: 420px) {
+    display: block;
+  }
+}
+
+.mobile_nav {
+  background: white;
+  list-style: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5vh 0;
+  width: 100%;
+  z-index: 1;
+
+  li {
+    margin-bottom: 20px;
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "DM Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 25px;
+      letter-spacing: 2px;
+      color: $primaryColor;
+      cursor: pointer;
+
+      &:hover {
+        color: #dfdfdf;
+      }
+    }
+  }
+}
